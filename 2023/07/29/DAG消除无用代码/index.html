@@ -12,7 +12,7 @@
 
     
     <title>
-        DAG消除无用代码 |
+        使用DAG消除无用代码 |
         
         Ichigo的个人小站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,20 +25,20 @@
 
     <meta name="description" content="Java 代码优化 目标：想要优化掉一些只用一次的临时变量 例子： 123&#x2F;&#x2F;b &#x3D; a;temp &#x3D; a;b &#x3D; temp;  优化方法：基于基本块的DAG(有向无环图)删除无用代码   基本块是满足下列条件的最大的连续 三地址指令序列：  控制流只能从基本块的第一个指令进入该块。也就是说，没有跳转到基本块中间或末尾指令的转移指令 除了基本块的最后一个指令，控制流在离开基本块之前不会跳转或者停">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DAG消除无用代码">
+<meta property="og:title" content="使用DAG消除无用代码">
 <meta property="og:url" content="http://example.com/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="Ichigo的个人小站">
 <meta property="og:description" content="Java 代码优化 目标：想要优化掉一些只用一次的临时变量 例子： 123&#x2F;&#x2F;b &#x3D; a;temp &#x3D; a;b &#x3D; temp;  优化方法：基于基本块的DAG(有向无环图)删除无用代码   基本块是满足下列条件的最大的连续 三地址指令序列：  控制流只能从基本块的第一个指令进入该块。也就是说，没有跳转到基本块中间或末尾指令的转移指令 除了基本块的最后一个指令，控制流在离开基本块之前不会跳转或者停">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549774.png?token=AZDLQNC5HRLJFQ3SALXLSTTEYUKJ6">
-<meta property="og:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549775.png?token=AZDLQNEJJYXEOIAXFECDH7LEYUKKC">
-<meta property="og:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549776.png?token=AZDLQNHTG4DKVXFWQCFPLJ3EYUKKG">
-<meta property="og:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549777.png?token=AZDLQNDCDDW6IR5KY2EDCY3EYUKKK">
+<meta property="og:image" content="https://img1.imgtp.com/2023/07/29/IiQHBlQd.png">
+<meta property="og:image" content="https://img1.imgtp.com/2023/07/29/xxQ5YkzR.png">
+<meta property="og:image" content="https://img1.imgtp.com/2023/07/29/RxAWdkgk.png">
+<meta property="og:image" content="https://img1.imgtp.com/2023/07/29/osMGNTmg.png">
 <meta property="article:published_time" content="2023-07-29T13:29:11.645Z">
-<meta property="article:modified_time" content="2023-07-29T13:34:20.026Z">
+<meta property="article:modified_time" content="2023-07-29T14:20:01.557Z">
 <meta property="article:author" content="Ichigo2315">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549774.png?token=AZDLQNC5HRLJFQ3SALXLSTTEYUKJ6">
+<meta name="twitter:image" content="https://img1.imgtp.com/2023/07/29/IiQHBlQd.png">
     
         <link rel="alternate" href="/atom.xml" title="Ichigo的个人小站" type="application/atom+xml">
     
@@ -117,7 +117,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="DAG消除无用代码" class="lazyload">
+        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="使用DAG消除无用代码" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -125,7 +125,7 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>DAG消除无用代码</h1></a>
+                        <a href="/" id="logo"><h1>使用DAG消除无用代码</h1></a>
                     
                 
             </div>
@@ -214,19 +214,19 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = b + c</span><br><span class="line">b = a - d</span><br><span class="line">c = b + c</span><br><span class="line">d = a - d</span><br></pre></td></tr></table></figure>
 <p>DAG：</p>
-<img src="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549774.png?token=AZDLQNC5HRLJFQ3SALXLSTTEYUKJ6" alt="DAG示意图" style="zoom: 33%;" />
+<img src="https://img1.imgtp.com/2023/07/29/IiQHBlQd.png" alt="DAG示意图" style="zoom: 33%;" />
 <p>在DAG中，如果一个output value（即根结点）在之后不会使用到（需要用到基本块间的关系），则该值的计算是没有意义的，可以去除计算该值的语句，该过程需要递归进行。<br />
 示例：如果d，或者c在之后不会被用到，则分别可以进行如下的消除。</p>
-<img src="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549775.png?token=AZDLQNEJJYXEOIAXFECDH7LEYUKKC" alt="死代码消除" style="zoom:80%;" />
+<img src="https://img1.imgtp.com/2023/07/29/xxQ5YkzR.png" alt="死代码消除" style="zoom:80%;" />
 <p>示例2：</p>
-<img src="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549776.png?token=AZDLQNHTG4DKVXFWQCFPLJ3EYUKKG" alt="DAG建图过程" style="zoom:80%;" />
+<img src="https://img1.imgtp.com/2023/07/29/RxAWdkgk.png" alt="DAG建图过程" style="zoom:80%;" />
 <p><strong>四元式对应的 DAG 结点形式</strong></p>
-<img src="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/image-20221129191549777.png?token=AZDLQNDCDDW6IR5KY2EDCY3EYUKKK" alt="四元式对应的 DAG 结点形式" style="zoom:50%;" />
+<img src="https://img1.imgtp.com/2023/07/29/osMGNTmg.png" alt="四元式对应的 DAG 结点形式" style="zoom:50%;" />
 <p>回到最初的问题：<code>temp = a; b = temp</code> 如何优化？</p>
 <p>A: 都是赋值语句（都为0型语句），DAG中只有一个结点，无边(即最简单情况的DAG化简)</p>
 <pre class="mermaid">graph TB
 x["a(=temp)=b"]</pre>
-<p>P.S. 看到小站可以正常支持<code>mermaid</code> ,开心一下</p>
+<p>P.S. 看到小站可以正常支持<code>mermaid</code>  开心一下</p>
 <h4 id="参考文档"><a class="markdownIt-Anchor" href="#参考文档"></a> 参考文档</h4>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42815609/article/details/108009445">Reference1</a><br />
 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38876114/article/details/110240107">Reference2</a><br />
@@ -235,7 +235,7 @@ x["a(=temp)=b"]</pre>
             
         </div>
         <footer class="article-footer">
-            <a data-url="http://example.com/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/" data-id="clko1ttj5000038w6gxr28ttw" data-title="DAG消除无用代码"
+            <a data-url="http://example.com/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/" data-id="clko4nh490002rcw6b4wte2bg" data-title="使用DAG消除无用代码"
                class="article-share-link">Share</a>
             
                 <a href="/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/#comments" class="article-comment-link">
@@ -258,8 +258,7 @@ x["a(=temp)=b"]</pre>
                 
                     
                     
-                        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="论文简读 [22 Security] Inference Attacks Against Graph Neural Networks"
-                             class="lazyload">
+                        <img data-src="/covers/coverpic (2).png" data-sizes="auto" alt="论文简读 [22 Security] Inference Attacks Against Graph Neural Networks" class="lazyload">
                     
                 
                 <a href="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/"></a>
@@ -276,8 +275,7 @@ x["a(=temp)=b"]</pre>
                 
                     
                     
-                        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="建站的心路历程——碎碎念"
-                             class="lazyload">
+                        <img data-src="/covers/coverpic (6).jpg" data-sizes="auto" alt="建站的心路历程——碎碎念" class="lazyload">
                     
                 
                 <a href="/2023/07/29/%E5%BB%BA%E7%AB%99%E7%9A%84%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%E2%80%94%E2%80%94%E7%A2%8E%E7%A2%8E%E5%BF%B5/"></a>
@@ -321,7 +319,7 @@ x["a(=temp)=b"]</pre>
         <div class="sidebar-state">
             <div class="sidebar-state-article">
                 <div>Posts</div>
-                <div class="sidebar-state-number">4</div>
+                <div class="sidebar-state-number">6</div>
             </div>
             <div class="sidebar-state-category">
                 <div>Categories</div>
@@ -385,6 +383,14 @@ x["a(=temp)=b"]</pre>
             <ul>
                 
                     <li>
+                        <a href="/2023/07/29/Abstract%20Software%20Watermark/">论文简读 An Abstract Interpretation-Based Framework for Software Watermarking</a>
+                    </li>
+                
+                    <li>
+                        <a href="/2023/07/29/RoPGen_repo/">论文精读 RoPGen Towards Robust Code Authorship Attribution via Automatic Coding Style Transformation</a>
+                    </li>
+                
+                    <li>
                         <a href="/2023/07/29/Difuzer/">论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps</a>
                     </li>
                 
@@ -393,11 +399,7 @@ x["a(=temp)=b"]</pre>
                     </li>
                 
                     <li>
-                        <a href="/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/">DAG消除无用代码</a>
-                    </li>
-                
-                    <li>
-                        <a href="/2023/07/29/%E5%BB%BA%E7%AB%99%E7%9A%84%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%E2%80%94%E2%80%94%E7%A2%8E%E7%A2%8E%E5%BF%B5/">建站的心路历程——碎碎念</a>
+                        <a href="/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/">使用DAG消除无用代码</a>
                     </li>
                 
             </ul>
@@ -416,7 +418,7 @@ x["a(=temp)=b"]</pre>
         <div id="footer-info" class="inner">
             
                 <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/"></a></br>
-All website licensed under&nbsp<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
+This work is licensed under&nbsp<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
             
             <div>
                 <span class="icon-copyright"></span>
@@ -433,10 +435,10 @@ All website licensed under&nbsp<a href="https://creativecommons.org/licenses/by/
             
                 <div>
                     <span class="icon-brush"></span>
-                    2.8k
+                    5.5k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:08
+                    00:18
                 </div>
             
             
@@ -455,7 +457,7 @@ All website licensed under&nbsp<a href="https://creativecommons.org/licenses/by/
         <div class="sidebar-state">
             <div class="sidebar-state-article">
                 <div>Posts</div>
-                <div class="sidebar-state-number">4</div>
+                <div class="sidebar-state-number">6</div>
             </div>
             <div class="sidebar-state-category">
                 <div>Categories</div>
