@@ -12,6 +12,7 @@
 
     
     <title>
+        论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps |
         
         Ichigo的个人小站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,13 +23,22 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ichigo的个人小站">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="一些概念  逻辑炸弹：一种在满足特定条件下才会触发的恶意行为。例：管理财务数据的员工在代码中加入如下规则：如果连续3个月没有在工资表中检测到自己的姓名，则删除数据库中的所有数据。 SHSO：Suspicious Hidden Sensitive Operations 可疑的隐性敏感操作，HSO：隐性敏感操作  区分：HSO可以不是故意的，也可以不是恶意的，而逻辑炸弹必然如此。e.g. 导航程序检">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps">
+<meta property="og:url" content="http://example.com/2023/07/29/Difuzer/index.html">
 <meta property="og:site_name" content="Ichigo的个人小站">
+<meta property="og:description" content="一些概念  逻辑炸弹：一种在满足特定条件下才会触发的恶意行为。例：管理财务数据的员工在代码中加入如下规则：如果连续3个月没有在工资表中检测到自己的姓名，则删除数据库中的所有数据。 SHSO：Suspicious Hidden Sensitive Operations 可疑的隐性敏感操作，HSO：隐性敏感操作  区分：HSO可以不是故意的，也可以不是恶意的，而逻辑炸弹必然如此。e.g. 导航程序检">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/fig1.jpg?token=AZDLQNCDEPEJFVYZWAMLMWDEYULQW">
+<meta property="og:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/list1.jpg?token=AZDLQNGHINXYQZQBPXXN2OLEYULQS">
+<meta property="og:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/fig2.jpg?token=AZDLQNC5DOL7HTJMWE4EUUDEYULQY">
+<meta property="og:image" content="http://example.com/2023/07/29/Difuzer/figs/tab1.jpg">
+<meta property="article:published_time" content="2023-07-29T13:42:07.561Z">
+<meta property="article:modified_time" content="2023-07-29T13:43:39.502Z">
 <meta property="article:author" content="Ichigo2315">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/fig1.jpg?token=AZDLQNCDEPEJFVYZWAMLMWDEYULQW">
     
         <link rel="alternate" href="/atom.xml" title="Ichigo的个人小站" type="application/atom+xml">
     
@@ -107,7 +117,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="" class="lazyload">
+        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -115,16 +125,12 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>Ichigo的个人小站</h1></a>
+                        <a href="/" id="logo"><h1>论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps</h1></a>
                     
                 
             </div>
             
                 
-                
-                    <h2 id="subtitle-wrap">
-                        <a href="/" id="subtitle">Ichigo&#39;s Blog</a>
-                    </h2>
                 
             
         </div>
@@ -163,199 +169,154 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main">
-    
-        
-    <div class="post-wrap-left wow fadeInUp">
-        
-            <a class="post-link" href="/2023/07/29/Difuzer/"></a>
-        
-        
-        <div class="post-cover-left">
-            
-                
-                
-                    <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps" class="lazyload">
-                
+                <section id="main"><article id="post-Difuzer" class="h-entry article article-type-post"
+         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-inner">
+        <div class="article-meta">
+            <div class="article-date wow slideInLeft">
+    <a href="/2023/07/29/Difuzer/" class="article-date-link">
+        <time datetime="2023-07-29T13:42:07.561Z"
+              itemprop="datePublished">2023-07-29</time>
+    </a>
+</div>
+
             
 
         </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-07-29</a>
-                
-                    <a><span class="icon-pencil"></span>1.3k words</a>
-                
-                
-                    <a><span class="icon-clock"></span>4 mins</a>
-                
-            </div>
-            <h2 class="post-title">论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps</h2>
-            <article class="post-article">
-                
-                     一些概念
+        <div class="hr-line"></div>
+        
 
-逻辑炸弹：一种在满足特定条件下才会触发的恶意行为。例：管理财务数据的员工在代码中加入如下规则：如果连续3个月没有在工资表中检测到自己的姓名，则删除数据库中的所有数据。
-SHSO：Suspicious Hidden Sensitive Operations 可疑的隐性敏感操作，HSO：隐性敏感操作
+        <div class="e-content article-entry" itemprop="articleBody">
+            
+                <h4 id="一些概念"><a class="markdownIt-Anchor" href="#一些概念"></a> 一些概念</h4>
+<ul>
+<li>逻辑炸弹：一种在满足特定条件下才会触发的恶意行为。例：管理财务数据的员工在代码中加入如下规则：如果连续3个月没有在工资表中检测到自己的姓名，则删除数据库中的所有数据。</li>
+<li>SHSO：<em>Suspicious Hidden Sensitive Operations</em> 可疑的隐性敏感操作，HSO：隐性敏感操作
+<ul>
+<li>区分：HSO可以不是<strong>故意的</strong>，也可以不是<strong>恶意的</strong>，而逻辑炸弹必然如此。e.g. 导航程序检测用户位置信息是合法的敏感操作</li>
+<li>SHSO: 可疑的HSO(e.g. 上例中的导航程序若换为计算器，则它是可疑的)</li>
+<li>以往研究表明，应用程序中HSO的数量可能很大，因此检测“可能成为逻辑炸弹”的SHSO才是研究的目的。</li>
+</ul>
+</li>
+</ul>
+<img src="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/fig1.jpg?token=AZDLQNCDEPEJFVYZWAMLMWDEYULQW" alt="fig1" style="zoom: 67%;" />
+<p>更正式的定义：</p>
+<p>令$$\Sigma$$为函数的语句集，  $$ C $$为一个条件语句， $$  \pi $$为语句的谓词</p>
+<ul>
+<li>触发器： $$ \tau = (c,T_c,\Phi_c)$$    $$T_c$$ 为真分支(当且仅当 $$\pi$$ 为真时执行的语句块)，$$\Phi_c$$ 为假分支</li>
+<li>触发器入口点：上述的条件语句$$ c $$ 即为入口点</li>
+<li>HSO：对于一个触发器$$\eta$$ ,当$$T_c $$ or $$ \Phi_c$$中含有敏感行为$$S \in \Sigma$$时，视为HSO</li>
+<li>SHSO：当HSO所包含的敏感行为疑似不合法时为SHSO</li>
+<li>logic bomb: 若SHSO包含的敏感行为确实是恶意的，则为逻辑炸弹</li>
+</ul>
+<img src="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/list1.jpg?token=AZDLQNGHINXYQZQBPXXN2OLEYULQS" alt="list1" style="zoom:67%;" />
+<p>例：从真实程序中提取的逻辑炸弹代码，触发条件被拆分为m,m1,m2,实际触发行为第3行，并进行了模拟器规避(7-9行)</p>
+<h4 id="logic-bomb-检测的难点"><a class="markdownIt-Anchor" href="#logic-bomb-检测的难点"></a> logic bomb 检测的难点？</h4>
+<ul>
+<li>
+<p>恶意软件编写者可以通过<strong>代码混淆</strong>（将代码转换成相同功能但难以阅读和理解的形式）来躲过静态分析</p>
+</li>
+<li>
+<p>对于动态分析，编写者可以预设一些测试过程中难以触发的条件，以躲避检测（例如触发条件为[某个环境变量满足特定值]的逻辑炸弹，由于测试环境通常返回环境变量的默认值，因此无法触发）</p>
+</li>
+<li>
+<p>缺乏对恶意行为的正式定义,导致检测者无法通过明确的规则/模型进行检测</p>
+</li>
+</ul>
+<h4 id="difuzer-一种混合方法用以揭露shsos从而改善对逻辑炸弹的检测"><a class="markdownIt-Anchor" href="#difuzer-一种混合方法用以揭露shsos从而改善对逻辑炸弹的检测"></a> Difuzer: 一种混合方法，用以揭露SHSOs，从而改善对逻辑炸弹的检测</h4>
+<ul>
+<li>结合静态分析和异常检测技术</li>
+<li>使用一个工具引擎和程序间数据流分析来识别SHSO的触发口</li>
+<li>提取特定的触发器特征，来描述SHSO</li>
+<li>利用One-Class SVM 实现一个无监督模型，以检测异常触发器</li>
+</ul>
+<p><strong>污点分析</strong></p>
+<p>一种数据流分析，跟踪程序中特定值的污点。当一个变量V从被称为<em>source 源</em>的特定函数中获得值时，它就被污损了。如果其他变量收到V中的值的派生，则污点会<strong>传播</strong>到其它变量。如果一个有污点的变量被用作称为<em>sink 汇</em> 的函数的参数，表明<em>source</em>派生值可以用作<em>sink</em>的参数，source-&gt;sink过程称为<em>flow 流</em>.本文利用污点分析检查表达式是否涉及敏感数据。</p>
+<p><strong>异常检测</strong></p>
+<p>分析同一类的数据时，如果几个值与大多数值由显著不同，则被叫做<strong>异常值</strong>。本文利用One-Class SVM实现这种异常值检测。异常通过<em>代表触发器的向量</em>的距离进行计算。</p>
+<h4 id="difuzer-流程"><a class="markdownIt-Anchor" href="#difuzer-流程"></a> Difuzer 流程</h4>
+<img src="https://raw.githubusercontent.com/Ichigo2315/IchigoBlog-Figs/main/figs/fig2.jpg?token=AZDLQNC5DOL7HTJMWE4EUUDEYULQY" alt="fig2" style="zoom:80%;" />
+<ol>
+<li>确定SHSO候选的入口点</li>
+</ol>
+<ul>
+<li>Systematic Study</li>
+</ul>
+<img src="figs\tab1.jpg" alt="tab1" style="zoom:50%;" />
+<p>一般地，是否触发SHSO的决定由系统属性做出*， 故作者对Android SDK ver3-30进行了系统的映射，以得到一个全面的敏感源列表（上表为列表内容的大致分类），并从访问这些属性的不同方法中提取模式，利用这些模式自动化地<strong>发现源</strong></p>
+<ul>
+<li>Instumentation</li>
+</ul>
+<p>污点分析包括一个数据流算法，该算法将污点从源转移到汇。由于源、汇都属于方法调用，而作为SHSO触发入口的if语句不是方法调用，所以if语句不能被视为一个汇，导致无法找到一个完整的流。故工具化(？过程会创建一些新的、静态的方法调用，并在流程结束时将这些新生成的方法作为FlowDroid的源和汇。</p>
+<ul>
+<li>污点分析</li>
+</ul>
+<p>使用一个流行的追踪敏感信息的污点分析框架FlowDroid，它的输入为方法层面的源与汇。将条件语句和字段访问转化为方法调用的步骤已经在前两步完成，输出为触发器的入口点（条件语句）</p>
+<ol start="2">
+<li>异常检测</li>
+</ol>
+<ul>
+<li>Features Extraction &amp; Training</li>
+</ul>
+<p>实现了OC-SVM算法，模型输入为先前获得的入口点对应的触发器计算得来的特征向量，输出为是否为异常触发器，训练集为10000个被标记为正常的特征向量。</p>
 
-区分：HSO可以不是故意的，也可以不是恶意的，而逻辑炸弹必然如此。e.g. 导航程序检测用户位置信息是合法的敏感操作
-SHSO: 可疑的HSO(e.g. 上例中的导航程序若换为计算器，则它是可疑的)
-以往研究表明，应用程序中HSO的数量可能很大，因此检测“可能成为逻辑炸弹”的SHSO才
-                
-            </article>
+            
         </div>
+        <footer class="article-footer">
+            <a data-url="http://example.com/2023/07/29/Difuzer/" data-id="clko2cf61000238w60roqdn5r" data-title="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps"
+               class="article-share-link">Share</a>
+            
+                <a href="/2023/07/29/Difuzer/#comments" class="article-comment-link">
+                    <span class="post-comments-count valine-comment-count" data-xid="/2023/07/29/Difuzer/"
+                          itemprop="commentCount"></span>
+                    Comments
+                </a>
+            
+            
+            
+            
+
+        </footer>
     </div>
-
-
     
         
-    <div class="post-wrap-right wow fadeInUp">
+    <nav id="article-nav" class="wow fadeInUp">
         
-            <a class="post-link" href="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/"></a>
         
-        <div class="post-cover-right">
-            
+            <div class="article-nav-link-wrap article-nav-link-right">
                 
+                    
+                    
+                        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="论文简读 [22 Security] Inference Attacks Against Graph Neural Networks"
+                             class="lazyload">
+                    
                 
-                    <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="论文简读 [22 Security] Inference Attacks Against Graph Neural Networks" class="lazyload">
-                
-            
-        </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-07-29</a>
-                
-                    <a><span class="icon-pencil"></span>325 words</a>
-                
-                
-                    <a><span class="icon-clock"></span>1 min</a>
-                
+                <a href="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/"></a>
+                <div class="article-nav-caption">Older</div>
+                <h3 class="article-nav-title">
+                    
+                        论文简读 [22 Security] Inference Attacks Against Graph Neural Networks
+                    
+                </h3>
             </div>
-            <h2 class="post-title">论文简读 [22 Security] Inference Attacks Against Graph Neural Networks</h2>
-            <article class="post-article">
-                
-                     3种推理攻击系统
-
-给定图嵌入，推断图基本信息（节点数、边数、图密度）
-给定图嵌入+子图，推断子图是否包含于目标图中
-提出新的图重构攻击，可重构与目标图具有相似结构的图
-
- 进一步提出基于扰动图嵌入的防御机制
-
-Node Classification :
-
-Hu→classifierH_u \rightarrow classifier
-Hu​→classifier
-
-Graph Classification:
-
-Hu,∀u∈V→HG→classifierH_u,\forall u\in V \rightarrow H_G \rightarrow classifier
-Hu​,∀u∈V→HG​
-                
-            </article>
-        </div>
-    </div>
+        
+    </nav>
 
 
     
-        
-    <div class="post-wrap-left wow fadeInUp">
-        
-            <a class="post-link" href="/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/"></a>
-        
-        
-        <div class="post-cover-left">
-            
-                
-                
-                    <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="DAG消除无用代码" class="lazyload">
-                
-            
-
-        </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-07-29</a>
-                
-                    <a><span class="icon-pencil"></span>444 words</a>
-                
-                
-                    <a><span class="icon-clock"></span>1 min</a>
-                
-            </div>
-            <h2 class="post-title">DAG消除无用代码</h2>
-            <article class="post-article">
-                
-                     Java 代码优化
-目标：想要优化掉一些只用一次的临时变量
-例子：
-123//b = a;temp = a;b = temp;
- 优化方法：基于基本块的DAG(有向无环图)删除无用代码
+</article>
 
 
-基本块是满足下列条件的最大的连续 三地址指令序列：
+    <section id="comments" class="vcomment">
 
-控制流只能从基本块的第一个指令进入该块。也就是说，没有跳转到基本块中间或末尾指令的转移指令
-除了基本块的最后一个指令，控制流在离开基本块之前不会跳转或者停机
+    </section>
 
 
 
-基本块的 DAG 表示
-
-对于每一个直接出现在基本块中的变量，定义其为input value，对应一个节点
-对于每条语句，对应一个node
-如果语句S1使用了语句S2 … Sn定义的变量，则
-                
-            </article>
-        </div>
-    </div>
 
 
-    
-        
-    <div class="post-wrap-right wow fadeInUp">
-        
-            <a class="post-link" href="/2023/07/29/%E5%BB%BA%E7%AB%99%E7%9A%84%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%E2%80%94%E2%80%94%E7%A2%8E%E7%A2%8E%E5%BF%B5/"></a>
-        
-        <div class="post-cover-right">
-            
-                
-                
-                    <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="建站的心路历程——碎碎念" class="lazyload">
-                
-            
-        </div>
-        <div class="post-info">
-            <div class="post-meta">
-                <a><span class="icon-calendar"></span>2023-07-29</a>
-                
-                    <a><span class="icon-pencil"></span>764 words</a>
-                
-                
-                    <a><span class="icon-clock"></span>2 mins</a>
-                
-            </div>
-            <h2 class="post-title">建站的心路历程——碎碎念</h2>
-            <article class="post-article">
-                
-                    暑假里心血来潮，想要建立一个个人博客，一方面存放一些技术笔记/生活记录，一方面也权当在互联网上留下自己的一个小小标记。简单地思考了网站必须的功能后，我将我想要实现的所有需求记录了下来⬇
- 基本功能
-
-展示个人信息(头像，简介等)
-支持发布markdown 格式的笔记，笔记含有封面、标题、简介与分类，可点击跳转到渲染好的markdown文件页面
-评论/点赞功能
-加入对emoji 的支持
-搜索框（模糊字符串搜索） 现在文章还太少就先不加了（逃
-夜间模式
-
-在思考网站需求的同时，我偶然间知道了hexo 这个博客搭建框架，它正好使用Markdown 解析博客文章（虽然也支持其它标记语言），已经满足了我
-                
-            </article>
-        </div>
-    </div>
 
 
-    
 
 
 
