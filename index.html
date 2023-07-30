@@ -30,8 +30,6 @@
 <meta property="article:author" content="Ichigo2315">
 <meta name="twitter:card" content="summary">
     
-        <link rel="alternate" href="/atom.xml" title="Ichigo的个人小站" type="application/atom+xml">
-    
     
         <link rel="shortcut icon" href="/images/favicon.ico">
     
@@ -53,6 +51,10 @@
 <link rel="stylesheet" href="https://unpkg.com/katex@0.16.7/dist/katex.min.css">
 
     
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+
     
     
     
@@ -150,9 +152,6 @@
             </nav>
             <nav id="sub-nav">
                 
-                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml"
-                       title="RSS Feed"></a>
-                
                 
             </nav>
             <div id="search-form-wrap">
@@ -175,7 +174,7 @@
             
                 
                 
-                    <img data-src="/covers/coverpic (2).jpg" data-sizes="auto" alt="论文简读 An Abstract Interpretation-Based Framework for Software Watermarking" class="lazyload">
+                    <img data-src="/covers/coverpic (7).webp" data-sizes="auto" alt="论文简读 An Abstract Interpretation-Based Framework for Software Watermarking" class="lazyload">
                 
             
 
@@ -224,7 +223,7 @@
             
                 
                 
-                    <img data-src="/covers/coverpic (7).webp" data-sizes="auto" alt="论文精读 RoPGen Towards Robust Code Authorship Attribution via Automatic Coding Style Transformation" class="lazyload">
+                    <img data-src="/covers/coverpic (2).webp" data-sizes="auto" alt="论文精读 RoPGen Towards Robust Code Authorship Attribution via Automatic Coding Style Transformation" class="lazyload">
                 
             
         </div>
@@ -268,7 +267,7 @@ C,C++,Java 的代码风格属性：
             
                 
                 
-                    <img data-src="/covers/coverpic (2).jpg" data-sizes="auto" alt="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps" class="lazyload">
+                    <img data-src="/covers/coverpic (3).jpg" data-sizes="auto" alt="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps" class="lazyload">
                 
             
 
@@ -310,7 +309,7 @@ SHSO: 可疑的HSO(e.g. 上例中的导航程序若换为计算器，则它是�
             
                 
                 
-                    <img data-src="/covers/coverpic (2).gif" data-sizes="auto" alt="论文简读 [22 Security] Inference Attacks Against Graph Neural Networks" class="lazyload">
+                    <img data-src="/covers/coverpic (6).jpg" data-sizes="auto" alt="论文简读 [22 Security] Inference Attacks Against Graph Neural Networks" class="lazyload">
                 
             
         </div>
@@ -414,7 +413,7 @@ Hu​,∀u∈V→HG​
             
                 
                 
-                    <img data-src="/covers/coverpic (1).webp" data-sizes="auto" alt="建站的心路历程——碎碎念" class="lazyload">
+                    <img data-src="/covers/coverpic (9).jpg" data-sizes="auto" alt="建站的心路历程——碎碎念" class="lazyload">
                 
             
         </div>
@@ -679,31 +678,28 @@ This work is licensed under&nbsp<a href="https://creativecommons.org/licenses/by
 
 
 
+
+
     
 <script src="https://unpkg.com/valine@1.5.1/dist/Valine.min.js"></script>
 
-    <script>
-        var GUEST_INFO = ['nick', 'mail', 'link'];
-        var guest_info = 'nick,mail,link'.split(',').filter(function (item) {
-            return GUEST_INFO.indexOf(item) > -1
-        });
-        var recordIP = JSON.parse('true');
-        var highlight = JSON.parse('true');
+    <script type="module">
+        import { init } from "https://unpkg.com/@waline/client@v2/dist/waline.mjs";
 
-        new Valine({
-            el: '.vcomment',
-            appId: "WSaLkPLme7s9LWhiC94zYgR6-MdYXbMMI",
-            appKey: "qwsraCtvxh1ltVBxKaDAE9XU",
-            placeholder: "EL PSY CONGROO",
-            pageSize: '10',
-            avatar: 'mp',
-            lang: 'zh-cn',
-            recordIP: recordIP,
-            highlight: highlight
+        init({
+          el: '.wcomment',
+          serverURL: 'https://ichigoblog.vercel.app',
+          lang: 'zh-CN',
+          locale: {},
+          emoji: ["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],
+          meta: ["nick","mail","link"],
+          requiredMeta: ["nick","mail"],
+          wordLimit: JSON.parse('0'),
+          comment: true,
+          pageSize: JSON.parse('10'),
+          dark: 'html[data-theme="dark"]'
         });
     </script>
-
-
 
 
 

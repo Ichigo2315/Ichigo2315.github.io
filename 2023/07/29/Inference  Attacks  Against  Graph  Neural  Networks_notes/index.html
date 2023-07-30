@@ -37,8 +37,6 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img1.imgtp.com/2023/07/29/jyGusucH.png">
     
-        <link rel="alternate" href="/atom.xml" title="Ichigo的个人小站" type="application/atom+xml">
-    
     
         <link rel="shortcut icon" href="/images/favicon.ico">
     
@@ -60,6 +58,10 @@
 <link rel="stylesheet" href="https://unpkg.com/katex@0.16.7/dist/katex.min.css">
 
     
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+
     
     
     
@@ -153,9 +155,6 @@
             </nav>
             <nav id="sub-nav">
                 
-                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml"
-                       title="RSS Feed"></a>
-                
                 
             </nav>
             <div id="search-form-wrap">
@@ -230,12 +229,12 @@
             <a data-url="http://example.com/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/" data-id="clko4nh4c0004rcw652326ulh" data-title="论文简读 [22 Security] Inference Attacks Against Graph Neural Networks"
                class="article-share-link">Share</a>
             
+            
                 <a href="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/#comments" class="article-comment-link">
-                    <span class="post-comments-count valine-comment-count" data-xid="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/"
+                    <span class="post-comments-count waline-comment-count" data-path="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/"
                           itemprop="commentCount"></span>
                     Comments
                 </a>
-            
             
             
             
@@ -250,7 +249,7 @@
                 
                     
                     
-                        <img data-src="/covers/coverpic (7).webp" data-sizes="auto" alt="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps" class="lazyload">
+                        <img data-src="/covers/coverpic (1).gif" data-sizes="auto" alt="论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps" class="lazyload">
                     
                 
                 <a href="/2023/07/29/Difuzer/"></a>
@@ -267,7 +266,7 @@
                 
                     
                     
-                        <img data-src="/covers/coverpic (2).gif" data-sizes="auto" alt="使用DAG消除无用代码" class="lazyload">
+                        <img data-src="/covers/coverpic (3).jpg" data-sizes="auto" alt="使用DAG消除无用代码" class="lazyload">
                     
                 
                 <a href="/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/"></a>
@@ -286,11 +285,9 @@
 </article>
 
 
-    <section id="comments" class="vcomment">
-
-    </section>
 
 
+     <div id="comments" class="wcomment"></div>
 
 
 
@@ -526,31 +523,28 @@ This work is licensed under&nbsp<a href="https://creativecommons.org/licenses/by
 
 
 
+
+
     
 <script src="https://unpkg.com/valine@1.5.1/dist/Valine.min.js"></script>
 
-    <script>
-        var GUEST_INFO = ['nick', 'mail', 'link'];
-        var guest_info = 'nick,mail,link'.split(',').filter(function (item) {
-            return GUEST_INFO.indexOf(item) > -1
-        });
-        var recordIP = JSON.parse('true');
-        var highlight = JSON.parse('true');
+    <script type="module">
+        import { init } from "https://unpkg.com/@waline/client@v2/dist/waline.mjs";
 
-        new Valine({
-            el: '.vcomment',
-            appId: "WSaLkPLme7s9LWhiC94zYgR6-MdYXbMMI",
-            appKey: "qwsraCtvxh1ltVBxKaDAE9XU",
-            placeholder: "EL PSY CONGROO",
-            pageSize: '10',
-            avatar: 'mp',
-            lang: 'zh-cn',
-            recordIP: recordIP,
-            highlight: highlight
+        init({
+          el: '.wcomment',
+          serverURL: 'https://ichigoblog.vercel.app',
+          lang: 'zh-CN',
+          locale: {},
+          emoji: ["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],
+          meta: ["nick","mail","link"],
+          requiredMeta: ["nick","mail"],
+          wordLimit: JSON.parse('0'),
+          comment: true,
+          pageSize: JSON.parse('10'),
+          dark: 'html[data-theme="dark"]'
         });
     </script>
-
-
 
 
 
