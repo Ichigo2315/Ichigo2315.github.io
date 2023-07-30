@@ -12,7 +12,7 @@
 
     
     <title>
-        Archives: 2023 |
+        Joern - 源码分析工具 |
         
         Ichigo的个人小站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,13 +23,21 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Ichigo的个人小站">
-<meta property="og:url" content="https://ichigo2315.github.io/archives/2023/index.html">
+    <meta name="description" content="Joern  一个源码分析工具  功能:解析C&#x2F;C++&#x2F;java源代码并提供代码的中间图表示，包含：  Abstract Syntax Trees (AST) 抽象语法树 Control Flow Graphs (CFG) 控制流图 Control Dependence Graphs (CDG) 控制依赖图 Data Dependence Graphs (DDG) 数据依赖图 Program D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Joern - 源码分析工具">
+<meta property="og:url" content="https://ichigo2315.github.io/2023/07/30/abt_joern/index.html">
 <meta property="og:site_name" content="Ichigo的个人小站">
+<meta property="og:description" content="Joern  一个源码分析工具  功能:解析C&#x2F;C++&#x2F;java源代码并提供代码的中间图表示，包含：  Abstract Syntax Trees (AST) 抽象语法树 Control Flow Graphs (CFG) 控制流图 Control Dependence Graphs (CDG) 控制依赖图 Data Dependence Graphs (DDG) 数据依赖图 Program D">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:%5CUsers%5CNamophobia%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220727155126355.png">
+<meta property="article:published_time" content="2023-07-30T02:55:27.343Z">
+<meta property="article:modified_time" content="2023-07-30T02:56:52.171Z">
 <meta property="article:author" content="Ichigo2315">
+<meta property="article:tag" content="Joern">
+<meta property="article:tag" content="源码分析">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5CNamophobia%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220727155126355.png">
     
     
         <link rel="shortcut icon" href="/images/favicon.ico">
@@ -106,7 +114,7 @@
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="" class="lazyload">
+        <img data-src="/images/wallhaven-g7l6kd-cut.jpg" data-sizes="auto" alt="Joern - 源码分析工具" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
@@ -114,7 +122,7 @@
                 
                     
                     
-                        <a href="/" id="logo"><h1>Archives</h1></a>
+                        <a href="/" id="logo"><h1>Joern - 源码分析工具</h1></a>
                     
                 
             </div>
@@ -155,243 +163,126 @@
 </header>
 
             <div id="content" class="outer">
-                <section id="main">
-    <div class="archives-outer-wrap wow fadeInUp">
-        <div class="tag-wrap">
+                <section id="main"><article id="post-abt_joern" class="h-entry article article-type-post"
+         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-inner">
+        <div class="article-meta">
+            <div class="article-date wow slideInLeft">
+    <a href="/2023/07/30/abt_joern/" class="article-date-link">
+        <time datetime="2023-07-30T02:55:27.343Z"
+              itemprop="datePublished">2023-07-30</time>
+    </a>
+</div>
+
             
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Java/">Java</a>
-                </div>
+    <div class="article-category wow slideInLeft">
+        <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a>
+    </div>
+
+
+        </div>
+        <div class="hr-line"></div>
+        
+
+        <div class="e-content article-entry" itemprop="articleBody">
             
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/编译原理/">编译原理</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/关于本站/">关于本站</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Logic-Bomb/">Logic Bomb</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/代码风格/">代码风格</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/语义等价转换/">语义等价转换</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/软件水印/">软件水印</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Python/">Python</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/pytorch/">pytorch</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/MLC/">MLC</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/Joern/">Joern</a>
-                </div>
-            
-                <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/源码分析/">源码分析</a>
-                </div>
+                <h4 id="joern"><a class="markdownIt-Anchor" href="#joern"></a> Joern</h4>
+<h5 id="一个源码分析工具"><a class="markdownIt-Anchor" href="#一个源码分析工具"></a> 一个源码分析工具</h5>
+<h5 id="功能解析ccjava源代码并提供代码的中间图表示包含"><a class="markdownIt-Anchor" href="#功能解析ccjava源代码并提供代码的中间图表示包含"></a> 功能:解析C/C++/java源代码并提供代码的中间图表示，包含：</h5>
+<ul>
+<li>Abstract Syntax Trees (AST) 抽象语法树</li>
+<li>Control Flow Graphs (CFG) 控制流图</li>
+<li>Control Dependence Graphs (CDG) 控制依赖图</li>
+<li>Data Dependence Graphs (DDG) 数据依赖图</li>
+<li>Program Dependence graphs (PDG) 程序依赖图</li>
+<li>Code Property Graphs (CPG14) 代码属性图</li>
+<li>Entire graph, i.e. convert to a different graph format (ALL)</li>
+</ul>
+<h4 id="环境配置与安装"><a class="markdownIt-Anchor" href="#环境配置与安装"></a> 环境配置与安装</h4>
+<h5 id="system"><a class="markdownIt-Anchor" href="#system"></a> System</h5>
+<ul>
+<li>WSL2 (Ubuntu 22.04)</li>
+</ul>
+<h5 id="java"><a class="markdownIt-Anchor" href="#java"></a> Java:</h5>
+<ul>
+<li>openjdk version “11.0.15” 2022-04-19</li>
+<li>OpenJDK Runtime Environment (build 11.0.15+10-Ubuntu-0ubuntu0.22.04.1)</li>
+<li>OpenJDK 64-Bit Server VM (build 11.0.15+10-Ubuntu-0ubuntu0.22.04.1, mixed mode, sharing)</li>
+</ul>
+<h5 id="packages"><a class="markdownIt-Anchor" href="#packages"></a> Packages:</h5>
+<ul>
+<li>unzip</li>
+</ul>
+<h5 id="installation"><a class="markdownIt-Anchor" href="#installation"></a> Installation</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> joern &amp;&amp; <span class="built_in">cd</span> joern <span class="comment"># optional</span></span><br><span class="line">curl -L <span class="string">&quot;https://github.com/joernio/joern/releases/latest/download/joern-install.sh&quot;</span> -o joern-install.sh</span><br><span class="line"><span class="built_in">chmod</span> u+x joern-install.sh</span><br><span class="line">./joern-install.sh --interactive</span><br></pre></td></tr></table></figure>
+<h4 id="导入源码新建工程"><a class="markdownIt-Anchor" href="#导入源码新建工程"></a> 导入源码&amp;新建工程</h4>
+<ul>
+<li>method1：fromstring</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">joern&gt; importCode.<span class="variable">$Languange</span>.fromString(<span class="string">&quot;<span class="variable">$Code</span>&quot;</span>)</span><br><span class="line">res0: Cpg = Cpg (Graph [<span class="variable">$number</span> nodes])</span><br></pre></td></tr></table></figure>
+<p>e.g.</p>
+<p><img src="C:%5CUsers%5CNamophobia%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220727155126355.png" alt="image-20220727155126355" /></p>
+<ul>
+<li>method 2: frompath</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">joern&gt; importCode(inputPath=<span class="string">&quot;<span class="variable">$path</span>&quot;</span>, projectName=<span class="string">&quot;<span class="variable">$name</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="解析c源码并输出对应的cpg的dot文件"><a class="markdownIt-Anchor" href="#解析c源码并输出对应的cpg的dot文件"></a> 解析c源码并输出对应的cpg的.dot文件</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">joern&gt; cpg.method(<span class="variable">$name</span>).dotCpg14.l</span><br></pre></td></tr></table></figure>
+<h4 id="可视化dot并导出为svg"><a class="markdownIt-Anchor" href="#可视化dot并导出为svg"></a> 可视化.dot并导出为svg</h4>
+<p>使用VS Code 插件 <code>Graphviz Interactive Preview</code></p>
+<h4 id="利用python脚本批量处理源代码cpdpdg"><a class="markdownIt-Anchor" href="#利用python脚本批量处理源代码cpdpdg"></a> 利用python脚本批量处理源代码(CPD&amp;PDG)</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line">JOERNPATH=<span class="string">&quot;$JOERNPATH&quot;</span></span><br><span class="line">root_dir = <span class="string">&#x27;./data&#x27;</span></span><br><span class="line">source_dir = <span class="string">&quot;$src&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">parse_source_code_to_dot</span>(<span class="params">file_path,f,</span></span><br><span class="line"><span class="params">out_dir_pdg=<span class="string">&#x27;/parsed/dot/pdg/&#x27;</span>,out_dir_cpg=<span class="string">&#x27;/parsed/dot/cpg/&#x27;</span></span>):</span><br><span class="line">    root_path = <span class="string">&#x27;./data&#x27;</span></span><br><span class="line">    <span class="keyword">try</span> :</span><br><span class="line">        os.makedirs(root_path+out_dir_pdg)</span><br><span class="line">        os.makedirs(root_path+out_dir_cpg)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    out_dir_cpg=root_path + <span class="string">&#x27;/parsed/dot/cpg/&#x27;</span></span><br><span class="line">    </span><br><span class="line">    shell_str = <span class="string">&quot;sh &quot;</span> + JOERNPATH + <span class="string">&quot;./joern-parse &quot;</span> + file_path</span><br><span class="line">    subprocess.call(shell_str, shell=<span class="literal">True</span>) </span><br><span class="line"></span><br><span class="line">    shell_export_cpg = <span class="string">&quot;sh &quot;</span> + JOERNPATH + <span class="string">&quot;joern-export &quot;</span> + <span class="string">&quot;--repr cpg14 --out &quot;</span> + out_dir_cpg + f.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>] + os.sep</span><br><span class="line">    subprocess.call(shell_export_cpg, shell=<span class="literal">True</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>写入到json:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> gzip</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;data/poj104/test.gzip&#x27;</span></span><br><span class="line"><span class="keyword">with</span> gzip.<span class="built_in">open</span>(path, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> fin:</span><br><span class="line">  json_bytes = fin.read()</span><br><span class="line">json_str = json_bytes.decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">objs = json.loads(json_str)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;json.json&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">  file.write(json.dumps(objs,indent=<span class="number">2</span>,ensure_ascii=<span class="literal">False</span>))</span><br></pre></td></tr></table></figure>
+
             
         </div>
-        <div class="category-wrap">
-            
-                <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/论文阅读/">论文阅读</a>
-                </div>
-            
-                <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/技术笔记/">技术笔记</a>
-                </div>
-            
-                <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/碎碎念/">碎碎念</a>
-                </div>
-            
-        </div>
-        
-        
+        <footer class="article-footer">
+            <a data-url="https://ichigo2315.github.io/2023/07/30/abt_joern/" data-id="clkoun8bx000mcgw6ck5f1x2n" data-title="Joern - 源码分析工具"
+               class="article-share-link">Share</a>
             
             
-                
+            
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Joern/" rel="tag">Joern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" rel="tag">源码分析</a></li></ul>
+
+
+        </footer>
+    </div>
     
-    <section class="archives-wrap wow fadeInUp">
-        <div class="archive-year-wrap">
-            <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-            <ul>
+        
+    <nav id="article-nav" class="wow fadeInUp">
+        
+        
+            <div class="article-nav-link-wrap article-nav-link-right">
                 
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/30/abt_joern/">
-            <time class="dt-published" datetime="2023-07-30T02:55:27.343Z"
-                  itemprop="datePublished">07-30</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
+                    
+                    
+                        <img data-src="/covers/coverpic (1).gif" data-sizes="auto" alt="使用torch训练MLC模型(2022/9)" class="lazyload">
+                    
+                
+                <a href="/2023/07/30/MLC/"></a>
+                <div class="article-nav-caption">Older</div>
+                <h3 class="article-nav-title">
+                    
+                        使用torch训练MLC模型(2022/9)
+                    
+                </h3>
+            </div>
         
-            
-                <a class="archive-article-title" href="/2023/07/30/abt_joern/">Joern - 源码分析工具</a>
-            
-        
-    </div>
-</li>
+    </nav>
 
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/30/MLC/">
-            <time class="dt-published" datetime="2023-07-30T02:49:32.157Z"
-                  itemprop="datePublished">07-30</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/07/30/MLC/">使用torch训练MLC模型(2022/9)</a>
-            
-        
-    </div>
-</li>
 
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/29/Abstract%20Software%20Watermark/">
-            <time class="dt-published" datetime="2023-07-29T14:20:53.766Z"
-                  itemprop="datePublished">07-29</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/07/29/Abstract%20Software%20Watermark/">论文简读 An Abstract Interpretation-Based Framework for Software Watermarking</a>
-            
-        
-    </div>
-</li>
-
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/29/RoPGen_repo/">
-            <time class="dt-published" datetime="2023-07-29T14:13:19.260Z"
-                  itemprop="datePublished">07-29</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/07/29/RoPGen_repo/">论文精读 RoPGen Towards Robust Code Authorship Attribution via Automatic Coding Style Transformation</a>
-            
-        
-    </div>
-</li>
-
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/29/Difuzer/">
-            <time class="dt-published" datetime="2023-07-29T13:42:07.561Z"
-                  itemprop="datePublished">07-29</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/07/29/Difuzer/">论文简读 Difuzer Uncovering Suspicious Hidden Sensitive Operations in Android Apps</a>
-            
-        
-    </div>
-</li>
-
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/">
-            <time class="dt-published" datetime="2023-07-29T13:38:30.320Z"
-                  itemprop="datePublished">07-29</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/07/29/Inference%20%20Attacks%20%20Against%20%20Graph%20%20Neural%20%20Networks_notes/">论文简读 [22 Security] Inference Attacks Against Graph Neural Networks</a>
-            
-        
-    </div>
-</li>
-
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/">
-            <time class="dt-published" datetime="2023-07-29T13:29:11.645Z"
-                  itemprop="datePublished">07-29</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/07/29/DAG%E6%B6%88%E9%99%A4%E6%97%A0%E7%94%A8%E4%BB%A3%E7%A0%81/">使用DAG消除无用代码</a>
-            
-        
-    </div>
-</li>
-
-                
-            
-            
-                <li class="archive-article">
-    <div class="archive-article-date-wrap">
-        <a href="/2023/07/29/%E5%BB%BA%E7%AB%99%E7%9A%84%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%E2%80%94%E2%80%94%E7%A2%8E%E7%A2%8E%E5%BF%B5/">
-            <time class="dt-published" datetime="2023-07-29T13:23:34.346Z"
-                  itemprop="datePublished">07-29</time>
-        </a>
-    </div>
-    <div class="archive-article-title-wrap">
-        
-            
-                <a class="archive-article-title" href="/2023/07/29/%E5%BB%BA%E7%AB%99%E7%9A%84%E5%BF%83%E8%B7%AF%E5%8E%86%E7%A8%8B%E2%80%94%E2%80%94%E7%A2%8E%E7%A2%8E%E5%BF%B5/">建站的心路历程——碎碎念</a>
-            
-        
-    </div>
-</li>
-
-                
-                
-            </ul>
-        </div>
-    </section>
     
-    </div>
+</article>
+
+
+
+
+
+
+
+
 
 
 
