@@ -57,10 +57,6 @@
 
     
     
-        
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
-
-    
     
     
 <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
@@ -197,12 +193,6 @@
                class="article-share-link">Share</a>
             
             
-                <a href="/about/index.html#comments" class="article-comment-link">
-                    <span class="post-comments-count waline-comment-count" data-path="/about/index.html"
-                          itemprop="commentCount"></span>
-                    Comments
-                </a>
-            
             
             
 
@@ -216,8 +206,6 @@
 
 
 
-
-     <div id="comments" class="wcomment"></div>
 
 
 
@@ -454,27 +442,6 @@ This work is licensed under&nbsp<a href="https://creativecommons.org/licenses/by
 
 
 
-
-    
-<script src="https://unpkg.com/valine@1.5.1/dist/Valine.min.js"></script>
-
-    <script type="module">
-        import { init } from "https://unpkg.com/@waline/client@v2/dist/waline.mjs";
-
-        init({
-          el: '.wcomment',
-          serverURL: 'https://ichigoblog.vercel.app',
-          lang: 'zh-CN',
-          locale: {},
-          emoji: ["https://unpkg.com/@waline/emojis@1.0.1/weibo","https://unpkg.com/@waline/emojis@1.0.1/alus","https://unpkg.com/@waline/emojis@1.0.1/bilibili","https://unpkg.com/@waline/emojis@1.0.1/qq","https://unpkg.com/@waline/emojis@1.0.1/tieba","https://unpkg.com/@waline/emojis@1.0.1/tw-emoji"],
-          meta: ["nick","mail","link"],
-          requiredMeta: ["nick","mail"],
-          wordLimit: JSON.parse('0'),
-          comment: true,
-          pageSize: JSON.parse('10'),
-          dark: 'html[data-theme="dark"]'
-        });
-    </script>
 
 
 
