@@ -209,6 +209,12 @@
             <a data-url="https://ichigo2315.github.io/about/index.html" data-id="clko4nh440000rcw68llr9kgk" data-title="Ichigo的个人小站"
                class="article-share-link">Share</a>
             
+                <a href="/about/index.html#comments" class="article-comment-link">
+                    <span class="post-comments-count valine-comment-count" data-xid="/about/index.html"
+                          itemprop="commentCount"></span>
+                    Comments
+                </a>
+            
             
             
             
@@ -221,6 +227,10 @@
     
 </article>
 
+
+    <section id="comments" class="vcomment">
+
+    </section>
 
 
 
@@ -471,6 +481,30 @@ This work is licensed under&nbsp<a href="https://creativecommons.org/licenses/by
 
 
 
+
+    
+<script src="https://unpkg.com/valine@1.5.1/dist/Valine.min.js"></script>
+
+    <script>
+        var GUEST_INFO = ['nick', 'mail', 'link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function (item) {
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        var recordIP = JSON.parse('true');
+        var highlight = JSON.parse('true');
+
+        new Valine({
+            el: '.vcomment',
+            appId: "WSaLkPLme7s9LWhiC94zYgR6-MdYXbMMI",
+            appKey: "qwsraCtvxh1ltVBxKaDAE9XU",
+            placeholder: "EL PSY CONGROO",
+            pageSize: '10',
+            avatar: 'mp',
+            lang: 'zh-cn',
+            recordIP: recordIP,
+            highlight: highlight
+        });
+    </script>
 
 
 
